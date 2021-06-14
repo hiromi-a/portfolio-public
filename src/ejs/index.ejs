@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<% page = 'home'; %>
+<html lang="ja">
+<head>
+  <%- include( '_components/_head' ); %>
+</head>
+
+<body class="home">
+  <div class="wrap">
+    <div class="container">
+      <%- include( '_components/_header' ); %>
+      <main class="container__main">
+        <article>
+          <%- include( '_components/_top_main' ); %>
+          <!-- section ▼-->
+          <section class="contents contents--skills">
+            <div class="contents__inner">
+              <h2 class="level2_heading level2_heading--home" id="skills">
+                skills
+                <span class="level2_heading__sub">できること</span>
+              </h2>
+            </div>
+            <div class="circle-bnr">
+              <div class="circle-bnr__inner">
+                <div class="circle-effect">
+                  <a href="/web" class="circle-effect__link">
+                    <span class="circle-effect__mask">
+                      <span class="circle-effect__bg circle-effect__bg--01">
+                        <span class="circle-effect__bg--01-icon"></span>
+                      </span>
+                      <span class="circle-effect__txt">
+                        コーディング<br>対応します
+                      </span>
+                      <span class="circle-effect__txt-disc circle-effect__txt-disc-01">
+                        レスポンシブコーディング、WordPressやShopify構築などを承っています。
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="circle-bnr__inner">
+                <div class="circle-effect">
+                  <a href="/stock" class="circle-effect__link">
+                    <span class="circle-effect__mask">
+                      <span class="circle-effect__bg circle-effect__bg--03">
+                        <span class="circle-effect__bg--03-icon"></span>
+                      </span>
+                      <span class="circle-effect__txt">イラスト素材<br>ご利用ください</span>
+                      <span class="circle-effect__txt-disc circle-effect__txt-disc-03">
+                        イラスト素材（ストックイラスト）を制作・販売しています。
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="circle-bnr__inner">
+                <div class="circle-effect">
+                  <a href="/illustration" class="circle-effect__link">
+                    <span class="circle-effect__mask">
+                      <span class="circle-effect__bg circle-effect__bg--02">
+                        <span class="circle-effect__bg--02-icon"></span>
+                      </span>
+                      <span class="circle-effect__txt">イラストを<br>描いています</span>
+                      <span class="circle-effect__txt-disc circle-effect__txt-disc-02">
+                        柔らかい雰囲気の水彩・デジタル水彩、線画などを描いています。
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- section End ▲-->
+
+          <!-- section ▼-->
+          <section class="contents contents--reverse">
+            <div class="contents__inner">
+              <h2 class="level2_heading level2_heading--home">
+                supported range
+                <span class="level2_heading__sub">対応範囲</span>
+              </h2>
+              <div class="skills-card">
+                <div class="skills-card__inner skills-card__inner-01" ontouchstart>
+                  <span class="skills-card__tooltip">お力になれます。</span>
+                  <p class="skills-card__txt">
+                    マークアップ
+                  </p>
+                </div>
+                <div class="skills-card__inner skills-card__inner-01" ontouchstart>
+                  <span class="skills-card__tooltip">ぜひ描かせてください。</span>
+                  <p class="skills-card__txt">
+                    イラスト制作
+                  </p>
+                </div>
+                <div class="skills-card__inner skills-card__inner-02" ontouchstart>
+                  <span class="skills-card__tooltip">対応いたします。</span>
+                  <p class="skills-card__txt">
+                    WordPress
+                  </p>
+                </div>
+                <div class="skills-card__inner skills-card__inner-02" ontouchstart>
+                  <span class="skills-card__tooltip">対応いたします。</span>
+                  <p class="skills-card__txt">
+                    Shopify
+                  </p>
+                </div>
+                <div class="skills-card__inner skills-card__inner-03" ontouchstart>
+                  <span class="skills-card__tooltip">一部対応。ご相談<br>させてください。</span>
+                  <p class="skills-card__txt">
+                    デザイン制作
+                  </p>
+                </div>
+                <div class="skills-card__inner skills-card__inner-03" ontouchstart>
+                  <span class="skills-card__tooltip">一部対応。ご相談<br>させてください。</span>
+                  <p class="skills-card__txt">
+                    フロント実装
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="contents__btn">
+              <a href="/web/#web-skills" class="btn js-anchor">
+                <span class="btn__inner">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M3.2 14.2222V4C3.2 2.89543 4.09543 2 5.2 2H18.8C19.9046 2 20.8 2.89543 20.8 4V14.2222M3.2 14.2222H20.8M3.2 14.2222L1.71969 19.4556C1.35863 20.7321 2.31762 22 3.64418 22H20.3558C21.6824 22 22.6414 20.7321 22.2803 19.4556L20.8 14.2222" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M11 19L13 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Webのできること
+                </span>
+              </a>
+              <a href="/illustration/#illustration-skills" class="btn js-anchor">
+                <span class="btn__inner">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 21.1679V14L12 7L16 14V21.1679" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 14C8 14 9.12676 15 10 15C10.8732 15 12 14 12 14C12 14 13.1268 15 14 15C14.8732 15 16 14 16 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  イラストについて
+                </span>
+              </a>
+            </div>
+          </section>
+          <!-- section End ▲-->
+
+          <!-- section ▼-->
+          <section class="contents contents--pd-half">
+            <div class="contents__inner">
+              <h2 class="level2_heading level2_heading--home">
+                stock illustration
+                <span class="level2_heading__sub">イラスト素材について</span>
+              </h2>
+              <p class="contents__txt contents__txt--center contents__txt--lead">
+                イラスト素材（ストックイラスト）を<br class="sp-only">販売しています。<br>
+                各取扱いサイトからご利用いただけます。<br>
+                素材一覧からご覧ください。
+              </p>
+              <div class="gallery-card gallery-card--stock">
+                <div class="gallery-card__inner">
+                  <a href="/img/stock/0137_stacked-books.png" class="gallery gallery-card__img-link" tabindex="-1" data-group="gallery01">
+                    <img src="/img/stock/0137_stacked-books.png" alt="" loading="lazy" class="gallery-card__img" loading="lazy">
+                  </a>
+                </div>
+                <div class="gallery-card__inner">
+                  <a href="/img/stock/0154_paint-palette.png" class="gallery gallery-card__img-link" tabindex="-1" data-group="gallery01">
+                    <img src="/img/stock/0154_paint-palette.png" alt="" loading="lazy" class="gallery-card__img" loading="lazy">
+                  </a>
+                </div>
+                <div class="gallery-card__inner">
+                  <a href="/img/stock/0159_red-wine-grapes.png" class="gallery gallery-card__img-link" tabindex="-1" data-group="gallery01">
+                    <img src="/img/stock/0159_red-wine-grapes.png" alt="" loading="lazy" class="gallery-card__img" loading="lazy">
+                  </a>
+                </div>
+                <div class="gallery-card__inner">
+                  <a href="/img/stock/0164_choco_bar.png" class="gallery gallery-card__img-link" tabindex="-1" data-group="gallery01">
+                    <img src="/img/stock/0164_choco_bar.png" alt="" loading="lazy" class="gallery-card__img" loading="lazy">
+                  </a>
+                </div>
+                <div class="gallery-card__inner">
+                  <a href="/img/stock/0208_citron-crosssection.png" class="gallery gallery-card__img-link" tabindex="-1" data-group="gallery01">
+                    <img src="/img/stock/0208_citron-crosssection.png" alt="" loading="lazy" class="gallery-card__img" loading="lazy">
+                  </a>
+                </div>
+              </div>
+              <div class="contents__btn">
+                <a href="/stock" class="btn">
+                  <span class="btn__inner">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M8 6L20 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4 6.01L4.01 5.99889" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4 12.01L4.01 11.9989" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4 18.01L4.01 17.9989" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8 18L20 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    イラスト素材一覧</span>
+                  </a>
+                </div>
+              </div>
+            </section>
+            <!-- section End ▲-->
+
+            <!-- section ▼-->
+            <section class="contents contents--pd-half contents--reverse">
+              <div class="contents__inner">
+                <h2 class="level2_heading level2_heading--home" id="profile">
+                  profile
+                  <span class="level2_heading__sub">自己紹介</span>
+                </h2>
+              </div>
+              <div class="contents__profile-icon">
+                <img src="/img/profile-icon.png" alt="自己紹介" class="contents__profile-icon-img" loading="lazy">
+              </div>
+              <div class="contents__txt contents__white-bg">
+                <div class="contents__white-bg-innter">
+                  <p class="contents__profile-name">
+                    <span class="txt-small">コーダー / イラストレーター</span><br>
+                    hiromi<span class="txt-small">（ひろみ）</span>
+                  </p>
+                  <p>
+                    北海道出身、神奈川県鎌倉市在住。<br>国家公務員→ <a href="/illustration/#illust-career">イラストレーター</a>→ <a href="/web/#web-career">Web制作会社勤務</a>を経て、<br>現在フリーランスでWeb制作などのお仕事に携わっています。<br>Webサイトやイラスト等、制作のお力になれたら嬉しいです。<br>好きなもの<br>
+                    レトロゲーム / 天文（天文宇宙星空検定2級）/ 読書 / 文房具 / 和雑貨
+                  </p>
+                  <p class="sns-icon"><a href="https://forms.gle/h5k4rSVJtqsbpTPL6" target="_blank" rel="noopener" class="sns__icon-item">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7 9L12 12.5L17 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M2 17V7C2 5.89543 2.89543 5 4 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H4C2.89543 19 2 18.1046 2 17Z" stroke="currentColor" stroke-width="1.5"/>
+                    </svg></a>
+                    <a href="https://twitter.com/hiaki_illust" target="_blank" rel="noopener" class="sns__icon-item"><svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                      <path d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></a>
+                    <a href="https://www.instagram.com/hiaki_i/" target="_blank" rel="noopener" class="sns__icon-item"><svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z" stroke="currentColor" stroke-width="1.5"/>
+                      <path d="M17.5 6.51L17.51 6.49889" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></a>
+                  </p>
+                </div>
+              </div>
+            </section>
+            <!-- section End ▲-->
+
+            <%- include( '_components/_contact' ); %>
+
+          </article>
+        </main>
+        <%- include( '_components/_footer' ); %>
+      </div>
+    </div>
+  </body>
+  </html>

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<% page = 'stock'; %>
+<html lang="ja">
+<head>
+  <%- include( '../_components/_head' ); %>
+</head>
+<body class="stock">
+  <div class="wrap">
+    <div class="container">
+      <%- include( '../_components/_header' ); %>
+      <!-- section ▼-->
+      <section class="contents">
+        <div class="level1_heading">
+          <h1 class="level1_heading__inner">
+            stock catalog
+            <span class="level1_heading__sub">イラスト素材一覧</span>
+          </h1>
+        </div>
+        <p class="contents__btn contents__btn--mb0">
+          <a href="#stock-list" class="btn btn--reverse js-anchor">
+            <span class="btn__inner txt-large"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.25 5.5V18M12.25 18L6.25 12M12.25 18L18.25 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>イラストを見る</span>
+          </a>
+        </p>
+      </section>
+      <!-- section End ▲-->
+      <main class="container__main">
+        <article>
+          <!-- section ▼-->
+          <section class="contents contents--first">
+            <div class="contents__inner contents__inner--m">
+              <div class="annotation-list">
+                <ul class="ul-list">
+                  <li class="ul-list__inner">
+                    イラストをカテゴリから検索できます。
+                  </li>
+                  <li class="ul-list__inner">
+                    画像を拡大すると詳細ウィンドウが表示されます。
+                  </li>
+                  <li class="ul-list__inner">
+                    各取扱いサイトボタンを押すと各サイトの販売ページが別ウィンドウで開きます。
+                  </li>
+                  <li class="ul-list__inner">
+                    サンプルは無料でダウンロードできます。小サイズ（低解像度）となります。<br>著作権の譲渡はない旨ご留意の上、ご自由にお使いください。規約は<a href="https://sozai-goyomi.com/pages/terms-summary" target="_blank" rel="noopener" class="contents__link">こちらのご利用規約</a> に準じます。
+                  </li>
+                  <li class="ul-list__inner">
+                    ご不明点がありましたら<a href="https://forms.gle/h5k4rSVJtqsbpTPL6" target="_blank" rel="noopener">お問い合わせフォーム</a> よりお気軽にご相談くださいませ。
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="contents__inner contents__inner--m">
+              <div class="accordion-area">
+                <div class="accordion-area__inner">
+                  <h2 class="accordion-area__title">カテゴリ検索　<span>※複数選択可</span></h2>
+                  <div class="box">
+                    <ul class="sort-btn">
+                      <li class="sort-btn__inner">
+                        <dl>
+                          <dt class="sort-btn__title">新着・人気</dt>
+                          <dd class="sort-btn__list"><ul>
+                            <li class="all active">
+                              <span class="sort-btn__txt">all</span>
+                            </li>
+                            <li class="popular">
+                              <span class="sort-btn__txt">人気</span>
+                            </li>
+                            <li class="new">
+                              <span class="sort-btn__txt">新着</span>
+                            </li>
+                          </ul></dd>
+                        </dl>
+                      </li>
+                      <li class="sort-btn__inner">
+                        <dl>
+                          <dt class="sort-btn__title">季節カテゴリ</dt>
+                          <dd class="sort-btn__list"><ul>
+                            <li class="spring">
+                              <span class="sort-btn__txt">春</span>
+                            </li>
+                            <li class="summer">
+                              <span class="sort-btn__txt">夏</span>
+                            </li>
+                            <li class="autumn">
+                              <span class="sort-btn__txt">秋</span>
+                            </li>
+                            <li class="winter">
+                              <span class="sort-btn__txt">冬</span>
+                            </li>
+                          </ul></dd>
+                        </dl>
+                      </li>
+                      <li class="sort-btn__inner">
+                        <dl>
+                          <dt class="sort-btn__title">行事・イベント</dt>
+                          <dd class="sort-btn__list"><ul>
+                            <li class="event">
+                              <span class="sort-btn__txt">行事・イベント</span>
+                            </li>
+                          </ul></dd>
+                        </dl>
+                      </li>
+                      <li class="sort-btn__inner">
+                        <dl>
+                          <dt class="sort-btn__title">自然</dt>
+                          <dd class="sort-btn__list"><ul>
+                            <li class="nature">
+                              <span class="sort-btn__txt">自然</span>
+                            </li>
+                            <li class="plant">
+                              <span class="sort-btn__txt">花・植物</span>
+                            </li>
+                            <li class="astronomy">
+                              <span class="sort-btn__txt">星・宇宙</span>
+                            </li>
+                          </ul></dd>
+                        </dl>
+                      </li>
+                      <li class="sort-btn__inner">
+                        <dl>
+                          <dt class="sort-btn__title">食べ物・飲み物</dt>
+                          <dd class="sort-btn__list"><ul>
+                            <li class="food">
+                              <span class="sort-btn__txt">食べ物・飲み物</span>
+                            </li>
+                          </ul></dd>
+                        </dl>
+                      </li>
+                      <li class="sort-btn__inner">
+                        <dl>
+                          <dt class="sort-btn__title">人物・生き物</dt>
+                          <dd class="sort-btn__list"><ul>
+                            <li class="character">
+                              <span class="sort-btn__txt">人物・キャラクター</span>
+                            </li>
+                            <li class="animal">
+                              <span class="sort-btn__txt">動物</span>
+                            </li>
+                          </ul></dd>
+                        </dl>
+                      </li>
+                      <li class="sort-btn__inner">
+                        <dl>
+                          <dt class="sort-btn__title">旅行</dt>
+                          <dd class="sort-btn__list"><ul>
+                            <li class="travel">
+                              <span class="sort-btn__txt">旅行</span>
+                            </li>
+                            <li class="vehicle">
+                              <span class="sort-btn__txt">乗り物</span>
+                            </li>
+                            <li class="town">
+                              <span class="sort-btn__txt">街・建築</span>
+                            </li>
+                          </ul></dd>
+                        </dl>
+                      </li>
+                      <li class="sort-btn__inner">
+                        <dl>
+                          <dt class="sort-btn__title">生活</dt>
+                          <dd class="sort-btn__list"><ul>
+                            <li class="life">
+                              <span class="sort-btn__txt">生活</span>
+                            </li>
+                            <li class="health">
+                              <span class="sort-btn__txt">健康・医療</span>
+                            </li>
+                            <li class="learning">
+                              <span class="sort-btn__txt">学習・教育</span>
+                            </li>
+                            <li class="business">
+                              <span class="sort-btn__txt">ビジネス</span>
+                            </li>
+                            <li class="sundry-goods">
+                              <span class="sort-btn__txt">雑貨・小物</span>
+                            </li>
+                            <li class="culture">
+                              <span class="sort-btn__txt">カルチャー</span>
+                            </li>
+                          </ul></dd>
+                        </dl>
+                      </li>
+                      <li class="sort-btn__inner">
+                        <dl>
+                          <dt class="sort-btn__title">年賀素材</dt>
+                          <dd class="sort-btn__list"><ul>
+                            <li class="nenga">
+                              <span class="sort-btn__txt">年賀</span>
+                            </li>
+                            <li class="eto">
+                              <span class="sort-btn__txt">干支</span>
+                            </li>
+                            <li class="lucky-things">
+                              <span class="sort-btn__txt">縁起物</span>
+                            </li>
+                            <li class="mizuhiki">
+                              <span class="sort-btn__txt">水引</span>
+                            </li>
+                            <li class="japanese-pattern">
+                              <span class="sort-btn__txt">和柄</span>
+                            </li>
+                          </ul></dd>
+                        </dl>
+                      </li>
+                      <li class="sort-btn__inner">
+                        <dl>
+                          <dt class="sort-btn__title">タッチ・スタイル</dt>
+                          <dd class="sort-btn__list"><ul>
+                            <li class="vector">
+                              <span class="sort-btn__txt">ベクターあり</span>
+                            </li>
+                            <li class="watercolor">
+                              <span class="sort-btn__txt">水彩・水彩風</span>
+                            </li>
+                            <li class="isometric">
+                              <span class="sort-btn__txt">アイソメトリック</span>
+                            </li>
+                          </ul></dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+          <!-- section End ▲-->
+          <!-- section ▼-->
+          <section class="contents contents--stock-page" id="stock-list">
+            <div class="contents__inner contents__inner--large">
+              <div class="item">
+
+                <!-- 人気 -->
+                <%- include( '../_items/_item0002.ejs' ); %><!-- ホットコーヒー（ブラック） -->
+                <%- include( '../_items/_item0017.ejs' ); %> <!-- 月 -->
+                <%- include( '../_items/_item0019.ejs' ); %> <!-- 月の満ち欠けのイメージ -->
+                <%- include( '../_items/_item0101.ejs' ); %> <!-- 水引梅結び（5本色違い） -->
+                <%- include( '../_items/_item0137.ejs' ); %> <!-- 読みかけの平積み本 -->
+                <%- include( '../_items/_item0036.ejs' ); %> <!-- 天使 -->
+                <%- include( '../_items/_item0032.ejs' ); %> <!-- 紅葉（もみじ） -->
+                <%- include( '../_items/_item0034.ejs' ); %> <!-- 天体望遠鏡 -->
+                <%- include( '../_items/_item0323.ejs' ); %> <!-- ミルククラウン -->
+                <%- include( '../_items/_item0037.ejs' ); %> <!-- 探偵道具のイメージ -->
+                <%- include( '../_items/_item0128.ejs' ); %> <!-- 星空 -->
+                <%- include( '../_items/_item0131.ejs' ); %> <!-- 桜の木 -->
+                <%- include( '../_items/_item0042.ejs' ); %> <!-- 読書の秋 -->
+                <%- include( '../_items/_item0256.ejs' ); %> <!-- 飛ぶ蝶 -->
+
+                <%- include( '../_items/_item0044.ejs' ); %> <!-- 月とハロウィン城 -->
+                <%- include( '../_items/_item0048.ejs' ); %> <!-- バスの運転手 -->
+                <%- include( '../_items/_item0050.ejs' ); %> <!-- 引っ越し -->
+                <%- include( '../_items/_item0267.ejs' ); %> <!-- 傘 -->
+                <%- include( '../_items/_item0053.ejs' ); %> <!-- 竹の盆ざる -->
+                <%- include( '../_items/_item0054.ejs' ); %> <!-- 竹ざるに柿 -->
+                <%- include( '../_items/_item0055.ejs' ); %> <!-- さんま -->
+                <%- include( '../_items/_item0056.ejs' ); %> <!-- 卵かけご飯 -->
+                <%- include( '../_items/_item0057.ejs' ); %> <!-- 白いご飯 -->
+                <%- include( '../_items/_item0151.ejs' ); %> <!-- ひまわり -->
+                <%- include( '../_items/_item0074.ejs' ); %> <!-- マルゲリータピザ -->
+                <%- include( '../_items/_item0075.ejs' ); %> <!-- ピザとビール -->
+                <%- include( '../_items/_item0082.ejs' ); %> <!-- みかん -->
+                <%- include( '../_items/_item0087.ejs' ); %> <!-- 富士山と初日の出 -->
+                <%- include( '../_items/_item0097.ejs' ); %> <!-- 東方の三博士 -->
+                <%- include( '../_items/_item0140.ejs' ); %> <!-- 山積みの本 -->
+                <%- include( '../_items/_item0100.ejs' ); %> <!-- 水引（あわじ結び2） -->
+                <%- include( '../_items/_item0145.ejs' ); %> <!-- 路線バス -->
+                <%- include( '../_items/_item0154.ejs' ); %> <!-- 絵の具のパレットと筆 -->
+                <%- include( '../_items/_item0159.ejs' ); %> <!-- 赤ワインとブドウ -->
+                <%- include( '../_items/_item0105.ejs' ); %> <!-- かぼちゃの煮物 -->
+                <%- include( '../_items/_item0106.ejs' ); %> <!-- ゆず -->
+                <%- include( '../_items/_item0108.ejs' ); %> <!-- 水引（蝶結び） -->
+                <%- include( '../_items/_item0112.ejs' ); %> <!-- 蝶のシルエット -->
+                <%- include( '../_items/_item0113.ejs' ); %> <!-- 水引梅結び（5本同色） -->
+                <%- include( '../_items/_item0114.ejs' ); %> <!-- 水引梅結び（3本） -->
+                <%- include( '../_items/_item0115.ejs' ); %> <!-- 水引梅結び（アイコン） -->
+                <%- include( '../_items/_item0144.ejs' ); %> <!-- 角砂糖 -->
+                <%- include( '../_items/_item0164.ejs' ); %> <!-- 板チョコ -->
+                <%- include( '../_items/_item0171.ejs' ); %> <!-- 日本地図 -->
+                <%- include( '../_items/_item0184.ejs' ); %> <!-- 富士山と初日の出（水彩） -->
+                <%- include( '../_items/_item0187.ejs' ); %> <!-- 梅の花（水彩） -->
+                <%- include( '../_items/_item0193.ejs' ); %> <!-- 【和柄 緑】工字繋ぎ（こうじつなぎ） --><%- include( '../_items/_item0029.ejs' ); %> <!-- バス -->
+                <%- include( '../_items/_item0200.ejs' ); %> <!-- 【和柄 象牙色】七宝（しっぽう） -->
+                <%- include( '../_items/_item0201.ejs' ); %> <!-- こたつ -->
+                <%- include( '../_items/_item0203.ejs' ); %> <!-- 【和柄 赤】麻の葉（あさのは） -->
+                <%- include( '../_items/_item0208.ejs' ); %> <!-- ゆずの断面 -->
+                <%- include( '../_items/_item0216.ejs' ); %> <!-- 柊（ヒイラギ） -->
+                <%- include( '../_items/_item0217.ejs' ); %> <!-- 春夏秋冬 -桜の木-（ポストカード） -->
+                <%- include( '../_items/_item0219.ejs' ); %> <!-- 春夏秋冬 -桜の木-（白背景） -->
+                <%- include( '../_items/_item0236.ejs' ); %> <!-- タンポポ -->
+                <%- include( '../_items/_item0239.ejs' ); %> <!-- テントウムシ -->
+                <%- include( '../_items/_item0240.ejs' ); %> <!-- カエル -->
+                <%- include( '../_items/_item0247.ejs' ); %> <!-- 消しゴム -->
+                <%- include( '../_items/_item0248.ejs' ); %> <!-- シャープペンと替芯 -->
+                <%- include( '../_items/_item0249.ejs' ); %> <!-- ボールペン -->
+                <%- include( '../_items/_item0043.ejs' ); %> <!-- ユリの花 -->
+                <%- include( '../_items/_item0257.ejs' ); %> <!-- タンポポと春の昆虫 -->
+                <%- include( '../_items/_item0258.ejs' ); %> <!-- オタマジャクシ -->
+                <%- include( '../_items/_item0260.ejs' ); %> <!-- ツバメとヒナ -->
+                <%- include( '../_items/_item0261.ejs' ); %> <!-- 北海道 -->
+                <%- include( '../_items/_item0262.ejs' ); %> <!-- 北海道と酪農 -->
+                <%- include( '../_items/_item0263.ejs' ); %> <!-- 牛乳 -->
+                <%- include( '../_items/_item0264.ejs' ); %> <!-- バター -->
+                <%- include( '../_items/_item0265.ejs' ); %> <!-- カマンベールチーズ -->
+                <%- include( '../_items/_item0266.ejs' ); %> <!-- ヨーグルト -->
+                <%- include( '../_items/_item0269.ejs' ); %> <!-- 水滴 -->
+                <%- include( '../_items/_item0271.ejs' ); %> <!-- 傘と長靴 -->
+                <%- include( '../_items/_item0276.ejs' ); %> <!-- ミルククラウン -->
+                <%- include( '../_items/_item0286.ejs' ); %> <!-- 新入社員（キラキラ） -->
+                <%- include( '../_items/_item0291.ejs' ); %> <!-- ネームカードホルダー3 -->
+                <%- include( '../_items/_item0296.ejs' ); %> <!-- 石畳 -->
+                <%- include( '../_items/_item0297.ejs' ); %> <!-- 卵アイコン -->
+                <%- include( '../_items/_item0299.ejs' ); %> <!-- 池で泳ぐ錦鯉 -->
+                <%- include( '../_items/_item0300.ejs' ); %> <!-- 睡蓮の池で泳ぐ錦鯉 -->
+                <%- include( '../_items/_item0347.ejs' ); %> <!-- 和柄のうちわ（七宝赤） -->
+                <%- include( '../_items/_item0354.ejs' ); %> <!-- 和風のうちわ（アサガオ） -->
+                <%- include( '../_items/_item0357.ejs' ); %> <!-- 和風のうちわセット -->
+                <%- include( '../_items/_item0358.ejs' ); %> <!-- 和柄のうちわセット -->
+                <%- include( '../_items/_item0376.ejs' ); %> <!-- 赤椿3 -->
+                <%- include( '../_items/_item0001.ejs' ); %> <!-- カフェラテ -->
+                <%- include( '../_items/_item0003.ejs' ); %> <!-- カプチーノ -->
+                <%- include( '../_items/_item0004.ejs' ); %> <!-- カフェオレ -->
+                <%- include( '../_items/_item0005.ejs' ); %> <!-- ホットコーヒー（砂糖ミルク付き） -->
+                <%- include( '../_items/_item0006.ejs' ); %> <!-- ミニトマト -->
+                <%- include( '../_items/_item0007.ejs' ); %> <!-- アスパラ -->
+                <%- include( '../_items/_item0008.ejs' ); %> <!-- プルメリア -->
+                <%- include( '../_items/_item0009.ejs' ); %> <!-- ゆでたまご（固ゆで） -->
+                <%- include( '../_items/_item0010.ejs' ); %> <!-- ゆでたまご（半熟） -->
+                <%- include( '../_items/_item0088.ejs' ); %> <!-- みたらしだんご -->
+                <%- include( '../_items/_item0011.ejs' ); %> <!-- 革の旅行鞄（キャメル） -->
+                <%- include( '../_items/_item0012.ejs' ); %> <!-- 革の旅行鞄（ブラウン） -->
+                <%- include( '../_items/_item0013.ejs' ); %> <!-- 敬老の日 -->
+                <%- include( '../_items/_item0014.ejs' ); %> <!-- 花瓶に生けたススキ -->
+                <%- include( '../_items/_item0015.ejs' ); %> <!-- 竹筒に生けたススキ -->
+                <%- include( '../_items/_item0016.ejs' ); %> <!-- 月見だんご -->
+                <%- include( '../_items/_item0018.ejs' ); %> <!-- お月見 -->
+                <%- include( '../_items/_item0020.ejs' ); %> <!-- 天気アイコン（色鉛筆ver.） -->
+                <%- include( '../_items/_item0021.ejs' ); %> <!-- 天気アイコン（水彩ver.） -->
+                <%- include( '../_items/_item0022.ejs' ); %> <!-- ゆりかもめ -->
+                <%- include( '../_items/_item0023.ejs' ); %> <!-- 敬老の日（色鉛筆ver.） -->
+                <%- include( '../_items/_item0024.ejs' ); %> <!-- たまご -->
+                <%- include( '../_items/_item0025.ejs' ); %> <!-- どんぐり -->
+                <%- include( '../_items/_item0026.ejs' ); %> <!-- かいわれ大根 -->
+                <%- include( '../_items/_item0027.ejs' ); %> <!-- かいわれ大根の芽 -->
+                <%- include( '../_items/_item0028.ejs' ); %> <!-- ネームカードホルダー -->
+                <%- include( '../_items/_item0030.ejs' ); %> <!-- どんぐりのやじろべえ -->
+                <%- include( '../_items/_item0031.ejs' ); %> <!-- 色々な女性の顔アイコン -->
+                <%- include( '../_items/_item0033.ejs' ); %> <!-- アンティーク コーヒーミル -->
+                <%- include( '../_items/_item0035.ejs' ); %> <!-- 山ガール -->
+                <%- include( '../_items/_item0038.ejs' ); %> <!-- 鹿撃ち帽 -->
+                <%- include( '../_items/_item0039.ejs' ); %> <!-- 開いた本としおり -->
+                <%- include( '../_items/_item0040.ejs' ); %> <!-- ハロウィンのかぼちゃ -->
+                <%- include( '../_items/_item0041.ejs' ); %> <!-- ハロウィンのおばけ -->
+                <%- include( '../_items/_item0045.ejs' ); %> <!-- ハロウィン -->
+                <%- include( '../_items/_item0046.ejs' ); %> <!-- ハッピーハロウィン -->
+                <%- include( '../_items/_item0047.ejs' ); %> <!-- いなり寿司 -->
+                <%- include( '../_items/_item0049.ejs' ); %> <!-- 絵の具のチューブ -->
+                <%- include( '../_items/_item0051.ejs' ); %> <!-- 絵の具のチューブ（12色） -->
+                <%- include( '../_items/_item0052.ejs' ); %> <!-- 柿 -->
+                <%- include( '../_items/_item0058.ejs' ); %> <!-- 醤油差し -->
+                <%- include( '../_items/_item0059.ejs' ); %> <!-- イノシシの親子 -->
+                <%- include( '../_items/_item0060.ejs' ); %> <!-- 亥の絵馬と破魔矢 -->
+                <%- include( '../_items/_item0061.ejs' ); %> <!-- 門松 -->
+                <%- include( '../_items/_item0062.ejs' ); %> <!-- 赤座布団に眠るイノシシ -->
+                <%- include( '../_items/_item0063.ejs' ); %> <!-- 眠るイノシシの親子 -->
+                <%- include( '../_items/_item0064.ejs' ); %> <!-- 初日の出とイノシシの親子 -->
+                <%- include( '../_items/_item0065.ejs' ); %> <!-- 亥の置物 -->
+                <%- include( '../_items/_item0066.ejs' ); %> <!-- 赤座布団に干支の置物（亥） -->
+                <%- include( '../_items/_item0067.ejs' ); %> <!-- ピアノ教本と楽譜 -->
+                <%- include( '../_items/_item0068.ejs' ); %> <!-- 折り鶴 -->
+                <%- include( '../_items/_item0069.ejs' ); %> <!-- 松竹梅 -->
+                <%- include( '../_items/_item0070.ejs' ); %> <!-- 七五三 -->
+                <%- include( '../_items/_item0071.ejs' ); %> <!-- 亥の置物の絵馬と破魔矢 -->
+                <%- include( '../_items/_item0072.ejs' ); %> <!-- 鏡餅 -->
+                <%- include( '../_items/_item0073.ejs' ); %> <!-- 桔梗 -->
+                <%- include( '../_items/_item0076.ejs' ); %> <!-- 生ビール -->
+                <%- include( '../_items/_item0077.ejs' ); %> <!-- 葉桜 -->
+                <%- include( '../_items/_item0078.ejs' ); %> <!-- 目玉焼きとウインナー -->
+                <%- include( '../_items/_item0079.ejs' ); %> <!-- エッグトースト -->
+                <%- include( '../_items/_item0080.ejs' ); %> <!-- お風呂のアヒル -->
+                <%- include( '../_items/_item0081.ejs' ); %> <!-- 雪だるまのアイコン -->
+                <%- include( '../_items/_item0083.ejs' ); %> <!-- ざるに盛ったみかん -->
+                <%- include( '../_items/_item0084.ejs' ); %> <!-- こたつにみかんと眠るネコ -->
+                <%- include( '../_items/_item0085.ejs' ); %> <!-- 散歩するイノシシ -->
+                <%- include( '../_items/_item0086.ejs' ); %> <!-- 駆けるイノシシ -->
+                <%- include( '../_items/_item0089.ejs' ); %> <!-- 雪の結晶のフレーム -->
+                <%- include( '../_items/_item0090.ejs' ); %> <!-- 蓄音機 -->
+                <%- include( '../_items/_item0091.ejs' ); %> <!-- センリョウ -->
+                <%- include( '../_items/_item0092.ejs' ); %> <!-- 梅の花 -->
+                <%- include( '../_items/_item0093.ejs' ); %> <!-- こたつで眠るイノシシ -->
+                <%- include( '../_items/_item0094.ejs' ); %> <!-- 丸窓と雪とセンリョウ -->
+                <%- include( '../_items/_item0095.ejs' ); %> <!-- イノシシの書き初め -->
+                <%- include( '../_items/_item0096.ejs' ); %> <!-- 冬の教会 -->
+                <%- include( '../_items/_item0098.ejs' ); %> <!-- 梅の花のフレーム -->
+                <%- include( '../_items/_item0099.ejs' ); %> <!-- 水引（あわじ結び） -->
+                <%- include( '../_items/_item0102.ejs' ); %> <!-- クリスマスケーキ -->
+                <%- include( '../_items/_item0103.ejs' ); %> <!-- サンタクロース -->
+                <%- include( '../_items/_item0104.ejs' ); %> <!-- 煙突から顔を出すサンタ -->
+                <%- include( '../_items/_item0107.ejs' ); %> <!-- ジンジャークッキー -->
+                <%- include( '../_items/_item0109.ejs' ); %> <!-- 春の七草 -->
+                <%- include( '../_items/_item0110.ejs' ); %> <!-- 成人式 -->
+                <%- include( '../_items/_item0111.ejs' ); %> <!-- 赤鬼・青鬼のお面 -->
+                <%- include( '../_items/_item0116.ejs' ); %> <!-- 紅梅の花 -->
+                <%- include( '../_items/_item0117.ejs' ); %> <!-- 満開の紅梅 -->
+                <%- include( '../_items/_item0118.ejs' ); %> <!-- 紅梅（和風） -->
+                <%- include( '../_items/_item0119.ejs' ); %> <!-- 白梅（和風） -->
+                <%- include( '../_items/_item0120.ejs' ); %> <!-- 板チョコ（バレンタインver.） -->
+                <%- include( '../_items/_item0121.ejs' ); %> <!-- 桜の花びら -->
+                <%- include( '../_items/_item0122.ejs' ); %> <!-- 紅白の桜の花びら -->
+                <%- include( '../_items/_item0123.ejs' ); %> <!-- 黒猫 -->
+                <%- include( '../_items/_item0124.ejs' ); %> <!-- 黒猫と蝶 -->
+                <%- include( '../_items/_item0125.ejs' ); %> <!-- 黒猫と蝶と桜 -->
+                <%- include( '../_items/_item0126.ejs' ); %> <!-- 絵の具の筆 -->
+                <%- include( '../_items/_item0127.ejs' ); %> <!-- かごバッグ -->
+                <%- include( '../_items/_item0129.ejs' ); %> <!-- 三つ葉のクローバー -->
+                <%- include( '../_items/_item0130.ejs' ); %> <!-- 四つ葉のクローバー -->
+                <%- include( '../_items/_item0132.ejs' ); %> <!-- 閉じた傘 -->
+                <%- include( '../_items/_item0133.ejs' ); %> <!-- 令和を掲げるイノシシ -->
+                <%- include( '../_items/_item0134.ejs' ); %> <!-- 赤いバラ -->
+                <%- include( '../_items/_item0135.ejs' ); %> <!-- 「令和元年」の手書き文字 -->
+                <%- include( '../_items/_item0136.ejs' ); %> <!-- カーネーション -->
+                <%- include( '../_items/_item0138.ejs' ); %> <!-- 六法全書 -->
+                <%- include( '../_items/_item0139.ejs' ); %> <!-- カーネーション（リボン付き） -->
+                <%- include( '../_items/_item0141.ejs' ); %> <!-- 柏餅 -->
+                <%- include( '../_items/_item0142.ejs' ); %> <!-- うちわ -->
+                <%- include( '../_items/_item0143.ejs' ); %> <!-- アサガオの双葉 -->
+                <%- include( '../_items/_item0146.ejs' ); %> <!-- パイプ煙草 -->
+                <%- include( '../_items/_item0147.ejs' ); %> <!-- 虫眼鏡 -->
+                <%- include( '../_items/_item0148.ejs' ); %> <!-- 読みかけ本と秋の栞 -->
+                <%- include( '../_items/_item0149.ejs' ); %> <!-- 読みかけ本と夏の栞 -->
+                <%- include( '../_items/_item0150.ejs' ); %> <!-- 織姫と彦星 -->
+                <%- include( '../_items/_item0152.ejs' ); %> <!-- 水中を泳ぐペンギン -->
+                <%- include( '../_items/_item0153.ejs' ); %> <!-- 紅葉のイメージ（水彩） -->
+                <%- include( '../_items/_item0155.ejs' ); %> <!-- ブドウ -->
+                <%- include( '../_items/_item0156.ejs' ); %> <!-- ブドウの葉の飾り枠 -->
+                <%- include( '../_items/_item0157.ejs' ); %> <!-- 赤ワイン -->
+                <%- include( '../_items/_item0158.ejs' ); %> <!-- 白ワイン -->
+                <%- include( '../_items/_item0160.ejs' ); %> <!-- 白ワインとブドウ -->
+                <%- include( '../_items/_item0161.ejs' ); %> <!-- シャンパン -->
+                <%- include( '../_items/_item0162.ejs' ); %> <!-- たくさんのどんぐり -->
+                <%- include( '../_items/_item0163.ejs' ); %> <!-- 色々なグラス -->
+                <%- include( '../_items/_item0165.ejs' ); %> <!-- ネズミ -->
+                <%- include( '../_items/_item0166.ejs' ); %> <!-- 白ネズミ -->
+                <%- include( '../_items/_item0167.ejs' ); %> <!-- ネズミの親子 -->
+                <%- include( '../_items/_item0168.ejs' ); %> <!-- クリスマスのリボン -->
+                <%- include( '../_items/_item0169.ejs' ); %> <!-- 子の絵馬と破魔矢 -->
+                <%- include( '../_items/_item0170.ejs' ); %> <!-- 三色だんご -->
+                <%- include( '../_items/_item0172.ejs' ); %> <!-- 赤座布団に干支の置物（子） -->
+                <%- include( '../_items/_item0173.ejs' ); %> <!-- サンタとトナカイ -->
+                <%- include( '../_items/_item0174.ejs' ); %> <!-- ネズミの親子と梅 -->
+                <%- include( '../_items/_item0175.ejs' ); %> <!-- 月夜を駆けるサンタクロース -->
+                <%- include( '../_items/_item0176.ejs' ); %> <!-- ネズミ（子）の置物 -->
+                <%- include( '../_items/_item0177.ejs' ); %> <!-- 白ネズミの親子 -->
+                <%- include( '../_items/_item0178.ejs' ); %> <!-- 冬のフレーム -->
+                <%- include( '../_items/_item0179.ejs' ); %> <!-- クリスマスベル -->
+                <%- include( '../_items/_item0180.ejs' ); %> <!-- 打ち出の小槌 -->
+                <%- include( '../_items/_item0181.ejs' ); %> <!-- 眠る犬 -->
+                <%- include( '../_items/_item0182.ejs' ); %> <!-- 子の置物の絵馬と破魔矢 -->
+                <%- include( '../_items/_item0183.ejs' ); %> <!-- 眠るネズミの親子 -->
+                <%- include( '../_items/_item0185.ejs' ); %> <!-- 打ち出の小槌とネズミ -->
+                <%- include( '../_items/_item0186.ejs' ); %> <!-- 富士山と初日の出 -->
+                <%- include( '../_items/_item0188.ejs' ); %> <!-- 扇子 -->
+                <%- include( '../_items/_item0189.ejs' ); %> <!-- ひとやすみ中のサンタ -->
+                <%- include( '../_items/_item0190.ejs' ); %> <!-- 星月夜 -->
+                <%- include( '../_items/_item0191.ejs' ); %> <!-- 【和柄 金色】矢絣（やがすり） -->
+                <%- include( '../_items/_item0192.ejs' ); %> <!-- 【和柄 桃色】矢絣（やがすり）） -->
+                <%- include( '../_items/_item0194.ejs' ); %> <!-- 【和柄 紺】工字繋ぎ（こうじつなぎ） -->
+                <%- include( '../_items/_item0195.ejs' ); %> <!-- 桔梗（水彩） -->
+                <%- include( '../_items/_item0196.ejs' ); %> <!-- 【和柄 金色】ヱ霞（えがすみ） -->
+                <%- include( '../_items/_item0197.ejs' ); %> <!-- 漆硝子のお猪口 -->
+                <%- include( '../_items/_item0198.ejs' ); %> <!-- 睡蓮 -->
+                <%- include( '../_items/_item0199.ejs' ); %> <!-- 【和柄 桃色】七宝（しっぽう） -->
+                <%- include( '../_items/_item0202.ejs' ); %> <!-- 【和柄 緑】麻の葉（あさのは） -->
+                <%- include( '../_items/_item0204.ejs' ); %> <!-- 聖夜の教会 -->
+                <%- include( '../_items/_item0205.ejs' ); %> <!-- 破魔矢を持つ着物の女の子 -->
+                <%- include( '../_items/_item0206.ejs' ); %> <!-- シャンパンで乾杯 -->
+                <%- include( '../_items/_item0207.ejs' ); %> <!-- 真上から見たプレゼント -->
+                <%- include( '../_items/_item0209.ejs' ); %> <!-- ネズミの書き初め -->
+                <%- include( '../_items/_item0210.ejs' ); %> <!-- 色違いの並べた扇子 -->
+                <%- include( '../_items/_item0211.ejs' ); %> <!-- 梅と蝶と富士 -->
+                <%- include( '../_items/_item0212.ejs' ); %> <!-- 手毬に乗るネズミ -->
+                <%- include( '../_items/_item0213.ejs' ); %> <!-- 手毬に乗るネズミ2 -->
+                <%- include( '../_items/_item0214.ejs' ); %> <!-- 竹筒に生けたセンリョウ -->
+                <%- include( '../_items/_item0215.ejs' ); %> <!-- ネズミの親子（梅フレーム） -->
+                <%- include( '../_items/_item0218.ejs' ); %> <!-- 春の七草（水彩） -->
+                <%- include( '../_items/_item0220.ejs' ); %> <!-- 快晴の青空と芝生 -->
+                <%- include( '../_items/_item0221.ejs' ); %> <!-- 青空と芝生（雲あり1） -->
+                <%- include( '../_items/_item0222.ejs' ); %> <!-- 青空と芝生（雲あり2） -->
+                <%- include( '../_items/_item0223.ejs' ); %> <!-- 夜明け前の空 -->
+                <%- include( '../_items/_item0224.ejs' ); %> <!-- 早朝の空 -->
+                <%- include( '../_items/_item0225.ejs' ); %> <!-- 夕暮れの空 -->
+                <%- include( '../_items/_item0226.ejs' ); %> <!-- 夕焼けの空 -->
+                <%- include( '../_items/_item0227.ejs' ); %> <!-- 曇天 -->
+                <%- include( '../_items/_item0228.ejs' ); %> <!-- 桜と蝶 -->
+                <%- include( '../_items/_item0229.ejs' ); %> <!-- 花見だんご -->
+                <%- include( '../_items/_item0230.ejs' ); %> <!-- 風に舞う桜 -->
+                <%- include( '../_items/_item0231.ejs' ); %> <!-- 桜のアイコン -->
+                <%- include( '../_items/_item0232.ejs' ); %> <!-- 風に舞う桜（水彩） -->
+                <%- include( '../_items/_item0233.ejs' ); %> <!-- ソメイヨシノ -->
+                <%- include( '../_items/_item0234.ejs' ); %> <!-- 菜の花 -->
+                <%- include( '../_items/_item0235.ejs' ); %> <!-- チューリップ -->
+                <%- include( '../_items/_item0237.ejs' ); %> <!-- ハクモクレン -->
+                <%- include( '../_items/_item0238.ejs' ); %> <!-- モンシロチョウ -->
+                <%- include( '../_items/_item0241.ejs' ); %> <!-- ツバメ -->
+                <%- include( '../_items/_item0242.ejs' ); %> <!-- ミツバチ -->
+                <%- include( '../_items/_item0243.ejs' ); %> <!-- 菜の花とミツバチ -->
+                <%- include( '../_items/_item0244.ejs' ); %> <!-- 菜の花とテントウムシ -->
+                <%- include( '../_items/_item0245.ejs' ); %> <!-- 鉛筆 -->
+                <%- include( '../_items/_item0246.ejs' ); %> <!-- 色鉛筆 -->
+                <%- include( '../_items/_item0250.ejs' ); %> <!-- ノート -->
+                <%- include( '../_items/_item0251.ejs' ); %> <!-- 開いたノート -->
+                <%- include( '../_items/_item0252.ejs' ); %> <!-- ノートと鉛筆 -->
+                <%- include( '../_items/_item0253.ejs' ); %> <!-- モンキチョウ -->
+                <%- include( '../_items/_item0254.ejs' ); %> <!-- アゲハ蝶 -->
+                <%- include( '../_items/_item0255.ejs' ); %> <!-- アゲハ蝶のシルエット -->
+                <%- include( '../_items/_item0259.ejs' ); %> <!-- カエルとオタマジャクシ -->
+                <%- include( '../_items/_item0268.ejs' ); %> <!-- アジサイ -->
+                <%- include( '../_items/_item0270.ejs' ); %> <!-- 黄色の長靴 -->
+                <%- include( '../_items/_item0272.ejs' ); %> <!-- カタツムリ -->
+                <%- include( '../_items/_item0273.ejs' ); %> <!-- アジサイとカタツムリ -->
+                <%- include( '../_items/_item0274.ejs' ); %> <!-- アサガオ -->
+                <%- include( '../_items/_item0275.ejs' ); %> <!-- アジサイ（水彩） -->
+                <%- include( '../_items/_item0277.ejs' ); %> <!-- てるてる坊主 -->
+                <%- include( '../_items/_item0278.ejs' ); %> <!-- 傘（水彩） -->
+                <%- include( '../_items/_item0279.ejs' ); %> <!-- 傘（水彩） -->
+                <%- include( '../_items/_item0280.ejs' ); %> <!-- 天気アイコン（水彩）2 -->
+                <%- include( '../_items/_item0281.ejs' ); %> <!-- 天気アイコン（水彩）3 -->
+                <%- include( '../_items/_item0282.ejs' ); %> <!-- 青い傘のライン素材 -->
+                <%- include( '../_items/_item0283.ejs' ); %> <!-- アサガオ -->
+                <%- include( '../_items/_item0284.ejs' ); %> <!-- アサガオ -->
+                <%- include( '../_items/_item0285.ejs' ); %> <!-- 簾（すだれ） -->
+                <%- include( '../_items/_item0289.ejs' ); %> <!-- IDカード -->
+                <%- include( '../_items/_item0290.ejs' ); %> <!-- ネームカードホルダー2 -->
+                <%- include( '../_items/_item0417.ejs' ); %> <!-- ダンボール箱のアイソメトリックイラスト -->
+                <%- include( '../_items/_item0416.ejs' ); %> <!-- 月夜にススキ -->
+                <%- include( '../_items/_item0294.ejs' ); %> <!-- 簾（すだれ）2 -->
+                <%- include( '../_items/_item0298.ejs' ); %> <!-- ユリの花2 -->
+                <%- include( '../_items/_item0301.ejs' ); %> <!-- アスパラとミニトマト -->
+                <%- include( '../_items/_item0302.ejs' ); %> <!-- ほおずき -->
+                <%- include( '../_items/_item0303.ejs' ); %> <!-- ほおずき（ポストカード） -->
+                <%- include( '../_items/_item0304.ejs' ); %> <!-- ほおずきの飾り枠 -->
+                <%- include( '../_items/_item0305.ejs' ); %> <!-- 和風のうちわ -->
+                <%- include( '../_items/_item0306.ejs' ); %> <!-- 和風のうちわ2 -->
+                <%- include( '../_items/_item0307.ejs' ); %> <!-- 和風のうちわ3 -->
+                <%- include( '../_items/_item0308.ejs' ); %> <!-- 和風のうちわ4 -->
+                <%- include( '../_items/_item0309.ejs' ); %> <!-- 和風のうちわ5 -->
+                <%- include( '../_items/_item0310.ejs' ); %> <!-- りんご -->
+                <%- include( '../_items/_item0311.ejs' ); %> <!-- 飾りかぼちゃ -->
+                <%- include( '../_items/_item0312.ejs' ); %> <!-- 飾りかぼちゃと紅葉 -->
+                <%- include( '../_items/_item0313.ejs' ); %> <!-- 雪輪文様に横向き牛 -赤背景 -->
+                <%- include( '../_items/_item0314.ejs' ); %> <!-- 雪輪文様に横向き牛 -金背景 -->
+                <%- include( '../_items/_item0315.ejs' ); %> <!-- 雪輪文様に横向き牛 -青背景 -->
+                <%- include( '../_items/_item0316.ejs' ); %> <!-- 赤座布団に丑の置物 -->
+                <%- include( '../_items/_item0317.ejs' ); %> <!-- 金屏風に丑の置物 -->
+                <%- include( '../_items/_item0318.ejs' ); %> <!-- 丑の置物 -扇背景 -->
+                <%- include( '../_items/_item0319.ejs' ); %> <!-- 赤座布団に黒丑の置物 -->
+                <%- include( '../_items/_item0320.ejs' ); %> <!-- 金屏風に黒丑の置物 -->
+                <%- include( '../_items/_item0321.ejs' ); %> <!-- 丑の置物の絵馬と破魔矢 -->
+                <%- include( '../_items/_item0322.ejs' ); %> <!-- 黒丑の置物の絵馬と破魔矢 -->
+                <%- include( '../_items/_item0324.ejs' ); %> <!-- 黒牛 -->
+                <%- include( '../_items/_item0325.ejs' ); %> <!-- 牛の親子 -->
+                <%- include( '../_items/_item0326.ejs' ); %> <!-- 牛の親子2 -->
+                <%- include( '../_items/_item0327.ejs' ); %> <!-- 縁なし畳のアイソメセット（グリーン） --><%- include( '../_items/_item0292.ejs' ); %> <!-- 運転免許証（表と裏） -->
+                <%- include( '../_items/_item0293.ejs' ); %> <!-- 運転免許証（写真入り） -->
+                <%- include( '../_items/_item0328.ejs' ); %> <!-- 富士と蝶と椿 -->
+                <%- include( '../_items/_item0329.ejs' ); %> <!-- 牛の書き初め -->
+                <%- include( '../_items/_item0330.ejs' ); %> <!-- 牛の書き初め2 -->
+                <%- include( '../_items/_item0331.ejs' ); %> <!-- 丑と年賀のアイコン -->
+                <%- include( '../_items/_item0332.ejs' ); %> <!-- 鏡餅のアイコン -->
+                <%- include( '../_items/_item0333.ejs' ); %> <!-- 水引梅結び（3本）の飾り枠 -->
+                <%- include( '../_items/_item0334.ejs' ); %> <!-- 桜の花 -->
+                <%- include( '../_items/_item0335.ejs' ); %> <!-- どんぐりと落ち葉 -->
+                <%- include( '../_items/_item0336.ejs' ); %> <!-- 雪の結晶のイメージ -->
+                <%- include( '../_items/_item0337.ejs' ); %> <!-- タンポポの群生 -->
+                <%- include( '../_items/_item0338.ejs' ); %> <!-- 天気アイコンセット -->
+                <%- include( '../_items/_item0339.ejs' ); %> <!-- 和柄のうちわ（青海波） -->
+                <%- include( '../_items/_item0340.ejs' ); %> <!-- 和柄のうちわ（黄小紋） -->
+                <%- include( '../_items/_item0341.ejs' ); %> <!-- 和柄のうちわ（緑小紋） -->
+                <%- include( '../_items/_item0342.ejs' ); %> <!-- 和柄のうちわ（格子） -->
+                <%- include( '../_items/_item0343.ejs' ); %> <!-- 和柄のうちわ（工字繋ぎ） -->
+                <%- include( '../_items/_item0344.ejs' ); %> <!-- 和柄のうちわ（麻の葉） -->
+                <%- include( '../_items/_item0345.ejs' ); %> <!-- 和柄のうちわ（七宝茶） -->
+                <%- include( '../_items/_item0346.ejs' ); %> <!-- 和柄のうちわ（矢絣） -->
+                <%- include( '../_items/_item0348.ejs' ); %> <!-- 和風のうちわ（無地） -->
+                <%- include( '../_items/_item0349.ejs' ); %> <!-- 和風のうちわ（和紙） -->
+                <%- include( '../_items/_item0350.ejs' ); %> <!-- 和風のうちわ（金魚） -->
+                <%- include( '../_items/_item0351.ejs' ); %> <!-- 和風のうちわ（花火） -->
+                <%- include( '../_items/_item0352.ejs' ); %> <!-- 和風のうちわ（錦鯉） -->
+                <%- include( '../_items/_item0353.ejs' ); %> <!-- 和風のうちわ（赤トンボ） -->
+                <%- include( '../_items/_item0355.ejs' ); %> <!-- 和風のうちわ（桔梗） -->
+                <%- include( '../_items/_item0356.ejs' ); %> <!-- 和風のうちわ（ツバメ） -->
+                <%- include( '../_items/_item0359.ejs' ); %> <!-- 夏の山 -->
+                <%- include( '../_items/_item0360.ejs' ); %> <!-- 竹筒 -->
+                <%- include( '../_items/_item0361.ejs' ); %> <!-- 雪の結晶の飾り枠（レトロ） -->
+                <%- include( '../_items/_item0362.ejs' ); %> <!-- 焦げた古い紙 -->
+                <%- include( '../_items/_item0363.ejs' ); %> <!-- もみじの葉（赤・黄・緑） -->
+                <%- include( '../_items/_item0364.ejs' ); %> <!-- もみじの葉（赤） -->
+                <%- include( '../_items/_item0365.ejs' ); %> <!-- もみじの葉（黄色） -->
+                <%- include( '../_items/_item0366.ejs' ); %> <!-- もみじの葉（緑） -->
+                <%- include( '../_items/_item0367.ejs' ); %> <!-- 色変わり中のもみじの葉 -->
+                <%- include( '../_items/_item0368.ejs' ); %> <!-- スイカ -->
+                <%- include( '../_items/_item0369.ejs' ); %> <!-- 紅葉のイメージ -->
+                <%- include( '../_items/_item0370.ejs' ); %> <!-- 和柄の絵馬と横向きの牛 -->
+                <%- include( '../_items/_item0371.ejs' ); %> <!-- 雪輪の水引飾りに横向きの牛（赤背景） --><%- include( '../_items/_item0295.ejs' ); %> <!-- 金魚 -->
+                <%- include( '../_items/_item0287.ejs' ); %> <!-- 新入社員（桜） -->
+                <%- include( '../_items/_item0288.ejs' ); %> <!-- 新入社員（若葉マーク） -->
+                <%- include( '../_items/_item0372.ejs' ); %> <!-- 雪輪の水引飾りに横向きの牛 -->
+                <%- include( '../_items/_item0373.ejs' ); %> <!-- 牧場の牛とセンリョウ -->
+                <%- include( '../_items/_item0374.ejs' ); %> <!-- 赤椿1 -->
+                <%- include( '../_items/_item0375.ejs' ); %> <!-- 赤椿2 -->
+                <%- include( '../_items/_item0377.ejs' ); %> <!-- 赤椿4 -->
+                <%- include( '../_items/_item0378.ejs' ); %> <!-- 赤椿5 -->
+                <%- include( '../_items/_item0379.ejs' ); %> <!-- 赤椿6 -->
+                <%- include( '../_items/_item0380.ejs' ); %> <!-- 白椿（薄色背景） -->
+                <%- include( '../_items/_item0381.ejs' ); %> <!-- 白椿（薄金色背景） -->
+                <%- include( '../_items/_item0382.ejs' ); %> <!-- コンタクトレンズ（影あり） -->
+                <%- include( '../_items/_item0383.ejs' ); %> <!-- コンタクトレンズ -->
+                <%- include( '../_items/_item0384.ejs' ); %> <!-- 菜の花とミツバチ -->
+                <%- include( '../_items/_item0385.ejs' ); %> <!-- 色々な石 -->
+                <%- include( '../_items/_item0386.ejs' ); %> <!-- 半分に切ったイチゴ -->
+                <%- include( '../_items/_item0387.ejs' ); %> <!-- さんま -->
+                <%- include( '../_items/_item0388.ejs' ); %> <!-- エアメールの便箋と封筒と万年筆 -->
+                <%- include( '../_items/_item0389.ejs' ); %> <!-- 計算機 -->
+                <%- include( '../_items/_item0390.ejs' ); %> <!-- 簿記の帳簿と計算機 -->
+                <%- include( '../_items/_item0391.ejs' ); %> <!-- 簿記の帳簿 -->
+                <%- include( '../_items/_item0392.ejs' ); %> <!-- クロッカス -->
+                <%- include( '../_items/_item0393.ejs' ); %> <!-- 赤いバラの花 -->
+                <%- include( '../_items/_item0394.ejs' ); %> <!-- 卵のアイコンセット -->
+                <%- include( '../_items/_item0395.ejs' ); %> <!-- フライパン -->
+                <%- include( '../_items/_item0396.ejs' ); %> <!-- 消火器 -->
+                <%- include( '../_items/_item0397.ejs' ); %> <!-- 和風の青の花のカード -->
+                <%- include( '../_items/_item0398.ejs' ); %> <!-- 和風の紅の花のカード -->
+                <%- include( '../_items/_item0399.ejs' ); %> <!-- 和風の桃色の花のカード -->
+                <%- include( '../_items/_item0400.ejs' ); %> <!-- システム手帳 -->
+                <%- include( '../_items/_item0401.ejs' ); %> <!-- 赤と白のチューリップのアイコン -->
+                <%- include( '../_items/_item0402.ejs' ); %> <!-- 赤と黄色のチューリップのアイコン -->
+                <%- include( '../_items/_item0403.ejs' ); %> <!-- 赤と青の風鈴と青紅葉 -->
+                <%- include( '../_items/_item0404.ejs' ); %> <!-- トートバッグ -->
+                <%- include( '../_items/_item0405.ejs' ); %> <!-- 水中を泳ぐペンギン -->
+                <%- include( '../_items/_item0406.ejs' ); %> <!-- シンプルな青の風鈴と青空 -->
+                <%- include( '../_items/_item0407.ejs' ); %> <!-- 風鈴 -->
+                <%- include( '../_items/_item0408.ejs' ); %> <!-- 並べて飾った色々な風鈴 -->
+                <%- include( '../_items/_item0409.ejs' ); %> <!-- キャベツ -->
+                <%- include( '../_items/_item0410.ejs' ); %> <!-- 青と紫のアサガオ -->
+                <%- include( '../_items/_item0411.ejs' ); %> <!-- すだれと風鈴と青紅葉 -->
+                <%- include( '../_items/_item0412.ejs' ); %> <!-- レトロなラジオのアイコン -->
+                <%- include( '../_items/_item0413.ejs' ); %> <!-- 青空水彩 -->
+                <%- include( '../_items/_item0414.ejs' ); %> <!-- 素朴な木のクリスマスオーナメント -->
+                <%- include( '../_items/_item0415.ejs' ); %> <!-- クリスマス用のギフトカード包装 -->
+
+                <%- include( '../_items/_item0418.ejs' ); %> <!-- 青い波のイメージの水彩テクスチャ -->
+                <%- include( '../_items/_item0419.ejs' ); %> <!-- 青い波のイメージの水彩テクスチャ -->
+                <%- include( '../_items/_item0420.ejs' ); %> <!-- 和室の間取り アイソメセット -->
+                <%- include( '../_items/_item0421.ejs' ); %> <!-- 和室の間取り 12畳 -->
+                <%- include( '../_items/_item0422.ejs' ); %> <!-- 和室の間取り 10畳 -->
+                <%- include( '../_items/_item0423.ejs' ); %> <!-- 和室の間取り 8畳 -->
+                <%- include( '../_items/_item0424.ejs' ); %> <!-- 和室の間取り 6畳 -->
+                <%- include( '../_items/_item0425.ejs' ); %> <!-- 和室の間取り 4畳半 -->
+                <%- include( '../_items/_item0426.ejs' ); %> <!-- 和室の間取り 3畳 -->
+                <%- include( '../_items/_item0427.ejs' ); %> <!-- 畳のアイソメセット -->
+                <%- include( '../_items/_item0428.ejs' ); %> <!-- 畳 -->
+                <%- include( '../_items/_item0429.ejs' ); %> <!-- 色褪せた畳のアイソメセット -->
+                <%- include( '../_items/_item0430.ejs' ); %> <!-- 色褪せた畳 -->
+                <%- include( '../_items/_item0431.ejs' ); %> <!-- 縁なし畳のアイソメセット（ブラウン） -->
+                <%- include( '../_items/_item0432.ejs' ); %> <!-- 縁なし畳のアイソメセット（グリーン） -->
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- section End ▲-->
+        <%- include( '../_components/_contact' ); %>
+      </article>
+    </main>
+    <%- include( '../_components/_footer' ); %>
+  </div>
+</div>
+</body>
+</html>

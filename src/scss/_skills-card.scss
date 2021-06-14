@@ -1,0 +1,107 @@
+.skills-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-top: 56px;
+  @include mediaBreakMax($pc_s) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include mediaBreakMax($sp_l) {
+    font-size: 14px;
+    grid-gap: 12px;
+  }
+  .skills-card__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 24px 16px 24px 16px;
+    min-height: 140px;
+    border: 1px solid rgba($txt_color,.08);
+    background-color: $reverse_color;
+    box-shadow: 0 5px 10px rgba($txt_color, .05%);
+    border-radius: 16px;
+    transition: box-shadow .3s linear;
+    transition: .3s;
+    cursor: pointer;
+    @include mediaBreakMax($pc) {
+      min-height: 180px;
+    }
+    @include mediaBreakMax($sp_l) {
+      padding: 20px 8px 20px 8px;
+      min-height: 126px;
+    }
+    .skills-card__tooltip {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -40px;
+      display: inline-block;
+      padding: 12px 8px 12px 12px;
+      white-space: nowrap;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.6;
+      background: $reverse_color;
+      color: $gray_color;
+      border: solid 2px $gray_color;
+      border-radius: 12px;
+      transition: 0.3s ease-in;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin: auto;
+        border: 8px solid transparent;
+        border-top-color: $gray_color;
+        transform: translateX(-50%);
+      }
+    }
+    &:hover, &:active {
+      box-shadow: 0 15px 30px -5px rgba($txt_color,.15), 0 0 5px rgba($txt_color,.1);
+      transform: translateY(-6px);
+      .skills-card__tooltip {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &.skills-card__inner-01 {
+      position: relative;
+      background: url(../img/emoji-icon.svg) center 30% no-repeat $reverse_color;
+      background-size: 40%;
+      &:before {
+        position: absolute;
+        content: '';
+        background: url(../img/flare-icons.svg) center no-repeat;
+        background-size: 100%;
+        top: 16px;
+        left: 16px;
+        width: 20px;
+        height: 20px;
+        @include mediaBreakMax($pc_s) {
+          top: 20px;
+          left: 20px;
+          width: 16%;
+          height: 24%;
+        }
+      }
+    }
+    &.skills-card__inner-02 {
+      background: url(../img/emoji-icon.svg) center 30% no-repeat $reverse_color;
+      background-size: 40%;
+    }
+    &.skills-card__inner-03 {
+      background: url(../img/emoji-gray-icon.svg) center 30% no-repeat $reverse_color;
+      background-size: 40%;
+    }
+  }
+  .skills-card__txt {
+    margin-top: 16px;
+    color: $main_color;
+    font-weight: 400;
+  }
+}

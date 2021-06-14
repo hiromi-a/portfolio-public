@@ -1,1 +1,1 @@
-# portfolio-public
+・distとejs/imgフォルダは空にしています。

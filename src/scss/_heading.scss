@@ -1,0 +1,60 @@
+.level1_heading {
+  text-transform: uppercase;
+  padding: 24px 0;
+  @include mediaBreakMax($tb) {
+    padding: 12px 0;
+  }
+  .level1_heading__inner {
+    font-size: $level1_heading;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .level1_heading__sub {
+    font-size: 18px;
+    margin-top: 24px;
+  }
+}
+
+.level2_heading {
+  font-size: $level2_heading;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  margin-bottom: 48px;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  .level2_heading__sub {
+    font-size: 16px;
+    margin-top: 20px;
+    color: rgba($gray_color, .8);
+  }
+  &.level2_heading--home {
+    font-size: $level1_heading;
+    background: none;
+    margin: 0;
+    align-items: center;
+    border-bottom: none;
+    padding: 0;
+    color: $main_color;
+    &::before {
+      content: none;
+    }
+  }
+}
+.level3_heading {
+  position: relative;
+  font-size: $level3_heading;
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-bottom: 24px;
+  font-weight: 400;
+  border-bottom: solid 1px rgba($txt_color, .5);
+  padding-bottom: 16px;
+  .half-media & {
+    margin-top: 0;
+  }
+}

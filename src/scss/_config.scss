@@ -1,0 +1,172 @@
+/* ******************************
+reset追記
+****************************** */
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+li {
+  list-style: none;
+}
+dl {
+  &::after {
+    content: none!important;
+  }
+}
+img {
+  width: 100%;
+  display: block;
+}
+a {
+  color: currentColor;
+}
+a,
+a:visited,
+a:focus,
+a:active,
+a:link {
+  outline: 0;
+}
+
+button {
+  display: block;
+  background: none;
+  border: none;
+}
+
+/* ******************************
+カラー
+****************************** */
+$txt_color: #444 !default;
+$reverse_color: #fff !default;
+$main_color: #64afc5!default;
+$accent_color: #ffcccc !default;
+$grad1_color: #a7bbe9 !default;
+$grad2_color: #A5DEE4 !default;
+$border_color: #cfcac1 !default;
+$bg_color: #e6e3de !default;
+$gray_color: #827f7c!default;
+
+/* ******************************
+レイアウト
+****************************** */
+
+// コンテンツ不要余白の削除
+.wrap {
+  overflow:hidden;
+}
+
+// フッター位置調整
+.container {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+footer {
+  margin-top: auto;
+}
+
+// ブレイクポイント
+$pc_l: 1400px !default;
+$pc: 1140px !default;
+$pc_s: 900px !default;
+$tb: 768px !default;
+$sp_l: 600px !default;
+$sp: 420px !default;
+
+// メディアクエリ　Max-width
+// @media only screen and ( max-width : $breakPoint )
+@mixin mediaBreakMax($breakPoint) {
+  @media only screen and ( max-width : ($breakPoint - 1px)) {
+    @content;
+  }
+}
+
+// コンテンツ幅
+@mixin contentsInner($contentsInner) {
+  max-width: $contentsInner;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+// ヘッダーの高さ
+$header_pc_height: 144px !default;
+$header_sp_height: 86px !default;
+
+// ブラウザ別表示
+.sp-only {
+  display: none;
+  @include mediaBreakMax($sp_l) {
+    display: block;
+  }
+}
+
+
+/* ******************************
+フォント設定
+****************************** */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+
+body {
+  font-family: 'Noto Sans JP', "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-weight: 400;
+  color: $txt_color;
+}
+
+$level1_heading: clamp(28px, 4.6vw, 46px) !default;
+$level2_heading: clamp(22px, 2.6vw, 26px) !default;
+$level3_heading: clamp(18px, 2.0vw, 20px) !default;
+$txt-large: 20px !default;
+$txt_dfault: 16px !default;
+$txt_small: clamp(12px, 1.4vw, 14px) !default;
+
+h1, h2, h3, h4 {
+  font-weight: 300;
+}
+.txt-large {
+  font-size: $txt-large!important;
+}
+.txt-small {
+  font-size: $txt_small;
+}
+
+/* ******************************
+行間の設定
+****************************** */
+
+// line-heightの不要な余白を打ち消す
+// line-heightと一緒に指定→　@include lineHeightCrop(*);
+// 参考：https://yuyakinoshita.com/blog/2020/01/20/line-height-crop/
+@mixin lineHeightCrop($line-height) {
+  &::before {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: calc((1 - #{$line-height}) * .5em);
+    content: "";
+  }
+  &::after {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-bottom: calc((1 - #{$line-height}) * .5em);
+    content: "";
+  }
+}
+
+//デフォルト本文の行間
+@mixin textLineHeight {
+  line-height: 2.1;
+  @include lineHeightCrop(2.1);
+  @include mediaBreakMax($tb) {
+    line-height: 1.9;
+    @include lineHeightCrop(1.9);
+  }
+}

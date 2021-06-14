@@ -1,0 +1,48 @@
+<header class="header">
+  <div class="header__inner">
+    <!-- logo ▼-->
+    <% if( page == 'home' ){ %>
+      <h1 class="header__logo">
+        <a href="/" class="header__logo-link">
+          <object type="image/svg+xml" data="/img/logo.svg" width="280" height="50" alt="Hiromi's Portfolio"></object>
+        </a>
+      </h1>
+      <% } else { %>
+        <p class="header__logo">
+          <a href="/" class="header__logo-link">
+            <object type="image/svg+xml" data="/img/logo.svg" width="280" height="50" alt="Hiromi's Portfolio"></object>
+          </a>
+        </p>
+        <% } %>
+        <!-- logo End ▲-->
+        <div class="js-header__nav">
+          <nav class="header__nav">
+            <ul class="header__nav-inner">
+              <li class="header__nav-item">
+                <a href="/" class="header__nav-link">home<span></span></a>
+              </li>
+              <li class="header__nav-item">
+                <a href="/web" class="header__nav-link">Web制作<span></span></a>
+              </li>
+              <li class="header__nav-item">
+                <a href="/illustration" class="header__nav-link">イラスト制作<span></span></a>
+              </li>
+              <li class="header__nav-item">
+                <a href="/stock" class="header__nav-link">素材一覧<span></span></a>
+              </li>
+              <li class="header__nav-item">
+                <a href="https://forms.gle/h5k4rSVJtqsbpTPL6" class="header__nav-link" target="_blank" rel="noopener">お問い合わせ<span></span></a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu-bg"></div>
+        </div>
+        <button class="hamburger js-hamburger">
+          <span class="hamburger__item"></span>
+          <span class="hamburger__item"></span>
+          <span class="hamburger__item"></span>
+        </button>
+      </div>
+
+
+    </header>

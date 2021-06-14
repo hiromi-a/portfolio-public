@@ -1,0 +1,32 @@
+
+.web_h1 {
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  .level1_heading {
+    color: $reverse_color;
+  }
+}
+
+.web_sec01,
+.web_sec02,
+.web_sec03 {
+  .level2_heading {
+    color: $txt_color;
+  }
+  .level2_heading__sub {
+    color: $txt_color;
+  }
+}
+
+.web_sec01 {
+  background: linear-gradient(to top, rgba($grad1_color, 0.8) 0%, rgba($grad2_color, 0.8) 100%),url(../img/web-img02.jpg) top left no-repeat;
+  background-size: cover;
+}
+.web_sec02 {
+  background: $reverse_color;
+  .contents__inner {
+    background: rgba($reverse_color, .9);
+  }
+}
+.web_sec03 {
+  background: $bg_color;
+}
