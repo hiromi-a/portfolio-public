@@ -1,0 +1,126 @@
+.skills-card_2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-top: 56px;
+  @include mediaBreakMax($pc_s) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @include mediaBreakMax($tb) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include mediaBreakMax($sp_l) {
+    font-size: 14px;
+    grid-gap: 12px;
+  }
+  @include mediaBreakMax($sp) {
+    grid-template-columns: 1fr 1fr;
+  }
+  .skills-card_2__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    &::before {
+      content: '';
+      position: absolute;
+      right: 10px;
+      top: -10px;
+      background: url(../img/icons_chat-lines-icon.svg) center center no-repeat;
+      background-size: cover;
+      width: 32px;
+      height: 32px;
+      z-index: 1;
+      transition: .3s;
+    }
+    &.wow {
+      opacity: 0;
+      transform: translate(0, -70px);
+      &:nth-child(1) {
+        transition: all .8s .1s;
+      }
+      &:nth-child(2) {
+        transition: all .8s .2s;
+      }
+      &:nth-child(3) {
+        transition: all .8s .3s;
+      }
+      &:nth-child(4) {
+        transition: all .8s .4s;
+      }
+      &:nth-child(5) {
+        transition: all .8s .5s;
+      }
+      &:nth-child(6) {
+        transition: all .8s .6s;
+      }
+      &.animated {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+    &:hover, &:focus, &:active {
+      &::before {
+        opacity: 0;
+      }
+      .skills-card_2__ietm-wrap {
+        transition: .8s ease;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  .skills-card_2__ietm-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: .8s ease;
+    min-height: 140px;
+    @include mediaBreakMax($pc_s) {
+      min-height: 190px;
+    }
+    @include mediaBreakMax($sp_l) {
+      min-height: 150px;
+    }
+  }
+  .skills-card_2__front, .skills-card_2__back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+    position: absolute;
+    padding: 16px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border: 1px solid rgba($txt_color,.08);
+    box-shadow: 0 5px 10px rgba($txt_color, .05%);
+    transition: box-shadow .3s linear;
+  }
+  .skills-card_2__front {
+    justify-content: space-between;
+    transform: translateZ(1px);
+    background: $reverse_color;
+    .skills-card_2__front-img {
+    }
+    .skills-card_2__front-txt {
+      line-height: 1.8;
+      @include lineHeightCrop(1.8);
+    }
+  }
+  .skills-card_2__back {
+    justify-content: center;
+    transform: rotateY(180deg);
+    background: $main_color;
+    color: $reverse_color;
+    .skills-card_2__back-txt {
+      line-height: 1.8;
+      @include lineHeightCrop(1.8);
+    }
+  }
+}

@@ -3,6 +3,13 @@
 <html lang="ja">
 <head>
   <%- include( '../_components/_head' ); %>
+  <title>Hiromi's Portfolio｜イラスト素材一覧</title>
+  <meta name="description" content="Hiromi's Portfolio｜イラスト制作、コーディングのポートフォリオサイト｜イラスト素材一覧">
+  <meta property="og:title" content="Hiromi's Portfolio｜イラスト素材一覧" />
+  <meta property="og:description" content=" Hiromi's Portfolio｜イラスト制作、コーディングのポートフォリオサイト｜イラスト素材一覧" />
+  <meta property="og:type" content="product" />
+  <meta property="og:url" content="https://hiromia-portfolio.com/stock/" />
+  <link rel="canonical" href="https://hiromia-portfolio.com/stock/">
 </head>
 <body class="stock">
   <div class="wrap">
@@ -16,13 +23,15 @@
             <span class="level1_heading__sub">イラスト素材一覧</span>
           </h1>
         </div>
-        <p class="contents__btn contents__btn--mb0">
-          <a href="#stock-list" class="btn btn--reverse js-anchor">
-            <span class="btn__inner txt-large"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.25 5.5V18M12.25 18L6.25 12M12.25 18L18.25 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>イラストを見る</span>
-          </a>
-        </p>
+          <p class="contents__btn contents__btn--mb0">
+            <a href="#stock-list" class="btn btn--reverse js-anchor">
+              <span class="btn__inner txt-large"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.25 5.5V18M12.25 18L6.25 12M12.25 18L18.25 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>イラストを見る</span>
+            </a>
+          </p>
+
+
       </section>
       <!-- section End ▲-->
       <main class="container__main">
@@ -33,16 +42,19 @@
               <div class="annotation-list">
                 <ul class="ul-list">
                   <li class="ul-list__inner">
-                    イラストをカテゴリから検索できます。
+                    イラストサンプルをご提供しております。<span class="marker">低解像度となりますが、無料で透かしのないサンプルがダウンロード可能です。</span><br>カンプ制作、ご提案用、アイディアストック等にご自由にお使いください。
+                  </li>
+                  <li class="ul-list__inner">
+                    イラストはカテゴリから検索ができます。
                   </li>
                   <li class="ul-list__inner">
                     画像を拡大すると詳細ウィンドウが表示されます。
                   </li>
                   <li class="ul-list__inner">
-                    各取扱いサイトボタンを押すと各サイトの販売ページが別ウィンドウで開きます。
+                    各取扱いサイトボタンを押すと各サイトの販売ページが別ウィンドウで開きます。<br><span class="marker">高解像度やベクターデータはストックサイトおよび直販素材サイトよりご購入いただけます。</span>
                   </li>
                   <li class="ul-list__inner">
-                    サンプルは無料でダウンロードできます。小サイズ（低解像度）となります。<br>著作権の譲渡はない旨ご留意の上、ご自由にお使いください。規約は<a href="https://sozai-goyomi.com/pages/terms-summary" target="_blank" rel="noopener" class="contents__link">こちらのご利用規約</a> に準じます。
+                    著作権は放棄しておりませんので、ご留意いただけますとサ幸いです。<br>規約は<a href="https://sozai-goyomi.com/pages/terms-summary" target="_blank" rel="noopener" class="contents__link">こちらのご利用規約</a> に準じます。
                   </li>
                   <li class="ul-list__inner">
                     ご不明点がありましたら<a href="https://forms.gle/h5k4rSVJtqsbpTPL6" target="_blank" rel="noopener">お問い合わせフォーム</a> よりお気軽にご相談くださいませ。
@@ -232,6 +244,19 @@
           <section class="contents contents--stock-page" id="stock-list">
             <div class="contents__inner contents__inner--large">
               <div class="item">
+
+                <!-- 新着 -->
+                <%- include( '../_items/_item0443.ejs' ); %><!-- 初日の出の富士と白梅（ツルと青海波）	 -->
+                <%- include( '../_items/_item0442.ejs' ); %><!-- 初日の出の富士と白梅（千鳥と青海波）	 -->
+                <%- include( '../_items/_item0441.ejs' ); %><!-- 初日の出の富士と白梅（金富士）	 -->
+                <%- include( '../_items/_item0440.ejs' ); %><!-- 初日の出の富士と白梅	 -->
+                <%- include( '../_items/_item0439.ejs' ); %><!-- 初日の出の富士と白梅（赤富士）	 -->
+                <%- include( '../_items/_item0438.ejs' ); %><!-- 【和柄】千鳥柄	 -->
+                <%- include( '../_items/_item0437.ejs' ); %><!-- 【和柄 春色】ヱ霞（えがすみ）	 -->
+                <%- include( '../_items/_item0436.ejs' ); %><!-- 咲き始めの梅	 -->
+                <%- include( '../_items/_item0435.ejs' ); %><!-- 白梅　桃色背景	 -->
+                <%- include( '../_items/_item0434.ejs' ); %><!-- 紅梅 -->
+                <%- include( '../_items/_item0433.ejs' ); %><!-- 聖夜と月と教会、サンタのシルエット -->
 
                 <!-- 人気 -->
                 <%- include( '../_items/_item0002.ejs' ); %><!-- ホットコーヒー（ブラック） -->

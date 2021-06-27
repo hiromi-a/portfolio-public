@@ -53,7 +53,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 24px 24px 32px 24px;
-    // padding: 24px 24px 24px 24px;
     flex-direction: column;
     @include mediaBreakMax($tb) {
       padding: 20px;
@@ -69,6 +68,9 @@
     margin-bottom: 16px;
     @include mediaBreakMax($tb) {
       margin-bottom: 0;
+      object {
+        max-width: 240px;
+      }
     }
   }
   .header__logo-link {
@@ -77,12 +79,15 @@
     font-family: 'Source Sans Pro', 'Helvetica', sans-serif;
     font-weight: 400;
     transition: .3s;
+    object {
+      pointer-events: none;
+    }
     @include mediaBreakMax($tb) {
       font-size: 28px;
     }
-    // &:hover {
-    //   opacity: .7;
-    // }
+    &:hover {
+      opacity: .7;
+    }
   }
   .header__nav {
     display: flex;

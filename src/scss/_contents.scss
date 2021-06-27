@@ -18,27 +18,56 @@
   }
   &.contents--main {
     position: relative;
-    background: linear-gradient(to right, rgba($grad1_color, 0.8) 0%, rgba($grad2_color, 0.8) 100%);
     background-size: cover;
     margin-top: 0;
     padding: 0;
-    max-height: 600px;
+    .contents__inner {
+      padding-top: 120px;
+    }
     .contents--main-inner {
-      background: url(../img/nishikigoi.svg) left -120px no-repeat;
-      background-size: cover;
-      padding: 96px 0  0 0;
-      @include mediaBreakMax($pc) {
-        background: url(../img/nishikigoi.svg) left -100px no-repeat;
-        background-size: 85%;
+      position: absolute;
+      top: -20%;
+      left: 0;
+      background: linear-gradient(to right, rgba($grad1_color, 0.8) 0%, rgba($grad2_color, 0.8) 100%);
+      min-height: 600px;
+      max-height: 600px;
+      width: 100%;
+      overflow: hidden;
+      z-index: -1;
+      svg {
+        width: 100%;
+        @include mediaBreakMax($tb) {
+            width: 120%
+        }
+        @include mediaBreakMax($sp_l) {
+            width: 180%
+        }
       }
-      @include mediaBreakMax($pc_s) {
-        background: url(../img/nishikigoi.svg) left top no-repeat;
-        background-size: 90%;
-      }
-      @include mediaBreakMax($tb) {
-        background: url(../img/nishikigoi.svg) left top no-repeat;
-        background-size: cover;
-        padding: 72px 0  0 0;
+      .watermark {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        &.wow {
+          opacity: 0;
+          &.watermark1 {
+            transition: all 1s .1s;
+          }
+          &.watermark2 {
+            transition: all 1s .9s;
+          }
+          &.watermark3 {
+            transition: all 1s 3.3s;
+          }
+          &.watermark4 {
+            transition: all 1s 4.0s;
+          }
+          &.watermark5 {
+            transition: all 1s 4.6s;
+          }
+          &.animated {
+            opacity: 1;
+          }
+        }
       }
     }
     .contents__btn {
@@ -52,11 +81,9 @@
     }
   }
   &.contents--skills {
-    // background: linear-gradient(to top, rgba($reverse_color, 0.2) 0%, rgba($reverse_color, 0.2) 100%),url(../img/nishikigoi-gray.svg) center center no-repeat;
-    // background-size: cover;
-    // @include mediaBreakMax($tb) {
-    //   background: none;
-    // }
+    .level2_heading {
+      margin-bottom: 24px;
+    }
   }
   &.contents--contact {
     padding: 56px 0;
@@ -194,6 +221,18 @@
   }
 }
 
+.contents__profile {
+  &.wow {
+    opacity: 0;
+    transform: translate(0, 10px);
+    transition: all .8s .1s;
+    &.animated {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+}
+
 .contents__profile-icon {
   position: relative;
   display: flex;
@@ -217,10 +256,11 @@
   z-index: 1;
 }
 .contents__profile-name {
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.6;
   margin-bottom: 24px;
+  letter-spacing: .075em;
   @include mediaBreakMax($sp_l) {
-    font-size: 22px;
+    font-size: 18px;
   }
 }

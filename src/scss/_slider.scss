@@ -1,6 +1,10 @@
-.slider {
-  width:94%;
+.slider, .slider-nav {
+  @include contentsInner($pc);
+  width:100%;
   margin:0 auto;
+  @include mediaBreakMax($pc_l) {
+    width:80%;
+  }
   .slick-slide {
     margin:0 6px;
   }
@@ -18,10 +22,16 @@
   .slick-prev {
     left: -1.5%;
     transform: rotate(-135deg);
+    @include mediaBreakMax($tb) {
+      left: -5%;
+    }
   }
   .slick-next {
     right: -1.5%;
     transform: rotate(45deg);
+    @include mediaBreakMax($tb) {
+      right: -5%;
+    }
   }
 }
 .slick-dots {
@@ -44,5 +54,12 @@
   }
   .slick-active button {
     background: $txt_color;
+  }
+}
+
+.slider-nav {
+  margin-top: 16px;
+  .slick-slide {
+    margin:0;
   }
 }

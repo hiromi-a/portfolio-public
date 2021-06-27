@@ -1,3 +1,9 @@
+.illustration_sec-menu {
+  @include mediaBreakMax($sp_l) {
+    padding-bottom: 0;
+  }
+}
+
 .illustration_sec01 {
   background: linear-gradient(to top, rgba($reverse_color, 0.1) 0%, rgba($reverse_color, 0.1) 100%),url(../img/illustration-img01.jpg) center center no-repeat;
   background-size: contain;
@@ -5,9 +11,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: 104px;
   margin-bottom: 24px;
   .level2_heading {
-    font-size: 36px;
+    font-size: 34px;
     margin-bottom: 32px;
     font-weight: 300;
   }
@@ -25,8 +32,8 @@
     }
   }
 }
-.illustration_sec02 {
-  margin: 160px auto 0 auto;
+.illustration_sec03 {
+  margin: 160px auto 160px auto;
   @include contentsInner($pc);
   position: relative;
   background: linear-gradient(to top, rgba($reverse_color, 0.3) 0%, rgba($reverse_color, 0.3) 100%),url(../img/illustration-img02.jpg) center left no-repeat;
@@ -35,21 +42,20 @@
   align-items: center;
   justify-content: center;
   padding: 24%;
-  margin-bottom: 40px;
   @include mediaBreakMax($pc) {
     margin-top: 300px;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
   }
   @include mediaBreakMax($tb) {
     position: inherit;
-    margin: 64px auto 0 auto;
+    margin: 64px auto 90px auto;
     padding: 0;
     flex-direction: column;
   }
   .level2_heading {
     align-items: flex-start;
     padding: 0;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
   }
   .contents__inner {
     position: absolute;
@@ -68,7 +74,7 @@
   }
 }
 
-.illustration_sec03 {
+.illustration_sec02 {
   margin: 160px auto 0 auto;
   @include contentsInner($pc);
   position: relative;
@@ -78,7 +84,7 @@
   align-items: center;
   justify-content: center;
   padding: 18%;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
   @include mediaBreakMax($tb) {
     position: inherit;
     margin: 64px auto 0 auto;
@@ -108,6 +114,7 @@
 }
 
 .illustration_sec04 {
+  padding-bottom: 0;
   .level2_heading {
     padding: 0;
   }

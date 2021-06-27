@@ -42,3 +42,33 @@
     display: block;
   }
 }
+
+.gallery-card--stock {
+  .gallery-card__inner {
+    &.wow {
+      opacity: 0;
+      &:nth-child(1) {
+        transition: all 2.2s .1s;
+      }
+      &:nth-child(2) {
+        transition: all 2.2s .2s;
+      }
+      &:nth-child(3) {
+        transition: all 2.2s .3s;
+      }
+      &:nth-child(4) {
+        transition: all 2.2s .4s;
+      }
+      &:nth-child(5) {
+        transition: all 2.2s .5s;
+      }
+      &:nth-child(6) {
+        transition: all 2.2s .6s;
+      }
+      &.animated {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+  }
+}
